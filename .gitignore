@@ -34,7 +34,6 @@ ENV/
 *~
 
 # Project specific
-charts/*.png
 *.log
 *.db
 *.sqlite3
