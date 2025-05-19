@@ -76,7 +76,7 @@ The tool generates three types of visualizations:
 
 MIT License - See LICENSE file for details
 
-## Author:
+## Author
 Dmitry Muzychuk
 
 ## 🌟 Features
@@ -232,19 +232,3 @@ The project uses PostgreSQL 17.2 with the following key tables:
 - Category hierarchy
 
 For detailed database structure, see [sql/schema.sql](sql/schema.sql).
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👤 Author
-
-**Dmitry Muzychuk**
-
-- GitHub: [@kidmain](https://github.com/kidmain)
-
-## 🙏 Acknowledgments
-
-- Financial analysis best practices
-- Python data science community
-- Open source visualization libraries 
