@@ -1,234 +1,106 @@
-# Personal Budget Analysis Tool
+# 🧮 Инструмент для анализа личного бюджета
 
-A comprehensive Python tool for analyzing personal budget data, tracking expenses, and visualizing financial metrics.
+Python-приложение для анализа личных финансов, отслеживания расходов, доходов и построения визуальных отчетов на основе данных из базы PostgreSQL.
 
-## Features
+---
 
-- Track and analyze income and expenses
-- Calculate key financial metrics (saving rate, burn ratio, etc.)
-- Generate detailed visualizations
-- PostgreSQL database integration
-- Configurable financial targets and thresholds
+## 💡 Основные возможности
 
-## Requirements
+- Отслеживание доходов и расходов
+- Подсчет ключевых финансовых показателей (уровень сбережений, коэффициент накоплений и др.)  
+- Визуализация финансовых метрик  
+- Интеграция с базой данных PostgreSQL  
+- Поддержка пользовательских финансовых целей и порогов  
 
-- Python 3.8+
-- PostgreSQL database
-- Required Python packages listed in `requirements.txt`
+---
 
-## Installation
+## 🌟 Функциональность
 
-1. Clone the repository:
-```bash
-git clone https://github.com/kidmain/budget-analysis.git
-cd budget-analysis
-```
+### 📊 Анализ данных
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+- Месячный учет доходов и расходов  
+- Сравнение зарплаты и общего дохода  
+- Категоризация и детализация расходов  
+- Расчет финансовых коэффициентов  
+- Учёт пассивного дохода  
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+### 📈 Визуализация
 
-4. Set up the database:
-- Create a PostgreSQL database
-- Run the SQL schema from `sql/schema.sql`
-- Copy `.env.example` to `.env` and update with your settings
+- Графики доходов и расходов по месяцам  
+- Дашборд финансовых метрик  
+- Boxplot-анализ  
+- Распределение расходов по категориям  
 
-## Configuration
+### 📉 Финансовые метрики
 
-The tool can be configured through:
-1. Environment variables
-2. `.env` file
-3. `config.py` settings
+- Коэффициент сбережений  
+- Доля расходов  
+- Уровень прожиточных расходов (burn rate)  
+- Коэффициент свободного дохода  
+- Прогресс к финансовой независимости  
 
-Key configuration options include:
-- Analysis years
-- Target expense thresholds
-- Financial ratio targets
-- Database connection settings
+---
 
-## Usage
+## 🛠️ Технологический стек
 
-Run the main analysis script:
-```bash
-python Budget.py
-```
+- **Python 3.8+**  
+- **Обработка данных**: `pandas`, `numpy`  
+- **Визуализация**: `matplotlib`, `seaborn`  
+- **База данных**: PostgreSQL  
+- **Работа с переменными окружения**: `python-dotenv`  
+- **Статическая типизация**: `mypy`  
 
-This will:
-1. Load data from the database
-2. Calculate financial metrics
-3. Generate visualization charts in the `charts/` directory
+---
 
-## Generated Charts
+## 📊 Генерируемые графики
 
-The tool generates three types of visualizations:
-1. `expenses_income.png` - Monthly expenses and income comparison
-2. `metrics.png` - Financial metrics dashboard
-3. `income_stats.png` - Income statistics and distributions
+- `expenses_income.png` — сравнение доходов и расходов по месяцам  
+- `metrics.png` — панель с основными финансовыми показателями  
 
-## License
+---
 
-MIT License - See LICENSE file for details
-
-## Author
-Dmitry Muzychuk
-
-## 🌟 Features
-
-- **Data Analysis**
-  - Monthly income and expense tracking
-  - Salary vs total income analysis
-  - Expense categorization and analysis
-  - Financial ratio calculations
-  - Passive income tracking
-
-- **Visualizations**
-  - Income vs Expenses trends
-  - Financial metrics dashboard
-  - Statistical boxplots
-  - Category-wise expense breakdown
-
-- **Financial Metrics**
-  - Saving rate
-  - Expense ratio
-  - Burn rate
-  - Disposable income ratio
-  - Financial independence progress
-
-## 🛠️ Tech Stack
-
-- **Python 3.8+**
-- **Data Processing**: pandas, numpy
-- **Visualization**: matplotlib, seaborn
-- **Database**: PostgreSQL
-- **Environment**: python-dotenv
-- **Type Checking**: mypy
-
-## 📋 Prerequisites
-
-- Python 3.8 or higher
-- PostgreSQL database
-- pip (Python package manager)
-
-## 🚀 Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/kidmain/budget-analysis.git
-   cd budget-analysis
-   ```
-
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Set up the database:
-   ```bash
-   # Create PostgreSQL database
-   createdb budget_db
-   
-   # Import database schema
-   psql budget_db < sql/schema.sql
-   ```
-
-5. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
-
-## 🔧 Configuration
-
-The project uses environment variables for configuration. Key settings include:
-
-- Analysis parameters (target expenses, income goals)
-- Financial ratio targets
-- Database connection details
-- Visualization preferences
-
-See `.env.example` for all available configuration options.
-
-## 📊 Usage
-
-1. Ensure your database is populated with financial data
-2. Run the main analysis:
-   ```bash
-   python Budget.py
-   ```
-3. View generated charts in the `charts/` directory:
-   - `expenses_income.png`: Monthly expense vs income trends
-   - `metrics.png`: Financial metrics dashboard
-   - `income_stats.png`: Statistical analysis of income/expenses
-
-## 📈 Sample Visualizations
-
-The tool generates three main types of visualizations:
-
-1. **Expenses vs Income Trend**
-   - Monthly comparison of income and expenses
-   - Color-coded expense categories
-   - Income difference indicators
-
-2. **Financial Metrics Dashboard**
-   - Saving rate trends
-   - Expense ratio analysis
-   - Financial independence progress
-
-3. **Statistical Analysis**
-   - Income distribution
-   - Expense patterns
-   - Salary trends
-
-## 🗄️ Project Structure
-```
+## 🗂 Структура проекта
 budget-analysis/
-├── sql/                    # Database related files
-│   ├── schema.sql         # Database structure
-│   └── Structure.png      # Database diagram
-├── charts/                # Generated visualizations
-├── .env.example          # Environment variables template
-├── .gitignore           # Git ignore rules
-├── LICENSE              # MIT License
-├── README.md            # Project documentation
-├── requirements.txt     # Python dependencies
-├── Budget.py           # Main analysis script
-└── config.py           # Configuration settings
-```
+├── sql/ # SQL-файлы для базы данных
+│ ├── schema.sql # Структура базы данных
+│ └── Structure.png # Диаграмма базы
+├── charts/ # Генерируемые визуализации
+├── .env.example # Пример переменных окружения
+├── LICENSE # Лицензия MIT
+├── README.md # Документация проекта
+├── requirements.txt # Зависимости Python
+├── Budget.py # Главный скрипт анализа
+└── config.py # Файл конфигурации
 
-## 📊 Database Structure
+---
 
-The project uses PostgreSQL 17.2 with the following key tables:
+## 🗄️ Структура базы данных
 
-### Core Tables
-- `balance` - Account balance tracking
-- `expenses` - Expense transactions with detailed attributes
-- `income` - Income records with categorization
-- `products` - Products/services catalog
+Используется PostgreSQL (версия 17.2) со следующими основными таблицами:
 
-### Classification Tables
-- `categories` - Main expense/income categories
-- `subcategories` - Detailed subcategories
-- `companies` - Transaction counterparties
-- `payment_method` - Payment methods
+### Основные таблицы
 
-### Key Features
-- Automatic balance calculation
-- Transaction timestamps and history
-- Shared expenses tracking
-- Gift and assistance tracking
-- Category hierarchy
+- `balance` — учёт баланса по счетам  
+- `expenses` — транзакции по расходам с детализацией  
+- `income` — доходы с разбивкой по категориям  
+- `products` — каталог товаров и услуг
 
-For detailed database structure, see [sql/schema.sql](sql/schema.sql).
+### Таблицы классификации
+
+- `categories` — основные категории доходов и расходов  
+- `subcategories` — подкатегории доходов и расходов  
+- `companies` — компании, где были доходы и расходы  
+- `payment_method` — способы оплаты  
+
+---
+
+## 📄 Лицензия
+
+Проект распространяется по лицензии MIT. См. файл `LICENSE` для подробностей.
+
+---
+
+## 👤 Автор
+
+**Дмитрий Музычук**  
+GitHub: [kidmain](https://github.com/kidmain)
